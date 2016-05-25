@@ -10,7 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var Product_filter_pipe_1 = require('./Product-filter.pipe');
-var star_component_1 = require('../shared/star.component');
+var real_pipe_1 = require('../shared/price-pipe/real-pipe');
+var star_component_1 = require('../shared/star.component/star.component');
 var ProductListComponent = (function () {
     function ProductListComponent() {
         this.pageTitle = 'Product list';
@@ -85,7 +86,7 @@ var ProductListComponent = (function () {
             selector: 'pm-products',
             templateUrl: 'app/products/product-list.component.html',
             styleUrls: ['app/products/product-list.component.css'],
-            pipes: [Product_filter_pipe_1.ProductFilterPipe],
+            pipes: [Product_filter_pipe_1.ProductFilterPipe, real_pipe_1.RealPipe],
             directives: [star_component_1.StarComponent]
         }), 
         __metadata('design:paramtypes', [])

@@ -30,8 +30,8 @@ var StarComponent = (function () {
     StarComponent = __decorate([
         core_1.Component({
             selector: 'ai-star',
-            templateUrl: 'app/shared/star.component.html',
-            styleUrls: ['app/shared/star.component.css']
+            templateUrl: 'app/shared/star.component/star.component.html',
+            styleUrls: ['app/shared/star.component/star.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], StarComponent);

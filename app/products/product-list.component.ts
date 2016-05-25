@@ -2,13 +2,14 @@ import {Component, OnInit} from '@angular/core';
 
 import {IProduct } from './product';
 import {ProductFilterPipe } from './Product-filter.pipe';
-import {StarComponent} from '../shared/star.component';
+import {RealPipe} from '../shared/price-pipe/real-pipe'
+import {StarComponent} from '../shared/star.component/star.component';
 
 @Component({
     selector: 'pm-products',
     templateUrl: 'app/products/product-list.component.html',
     styleUrls: ['app/products/product-list.component.css'],
-    pipes: [ProductFilterPipe],
+    pipes: [ProductFilterPipe, RealPipe],
     directives: [StarComponent]
 })
 
