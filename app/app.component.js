@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var product_list_component_ts_1 = require('./products/product-list.component.ts');
+var product_service_1 = require('./products/product.service');
 var AppComponent = (function () {
     function AppComponent() {
         this.pageTitle = 'Acme Product Management';
@@ -18,7 +19,8 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'pm-app',
             template: "\n    <div><h1>{{pageTitle}}</h1>\n        <pm-products></pm-products>\n    </div>\n    ",
-            directives: [product_list_component_ts_1.ProductListComponent]
+            directives: [product_list_component_ts_1.ProductListComponent],
+            providers: [product_service_1.ProductService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
