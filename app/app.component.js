@@ -11,8 +11,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
 require('rxjs/Rx'); //Load all features
+var router_1 = require('@angular/router');
 var product_list_component_ts_1 = require('./products/product-list.component.ts');
 var product_service_1 = require('./products/product.service');
+var welcome_component_1 = require('./home/welcome.component');
 var AppComponent = (function () {
     function AppComponent() {
         this.pageTitle = 'Acme Product Management';
@@ -23,8 +25,14 @@ var AppComponent = (function () {
             template: "\n    <div><h1>{{pageTitle}}</h1>\n        <pm-products></pm-products>\n    </div>\n    ",
             directives: [product_list_component_ts_1.ProductListComponent],
             providers: [product_service_1.ProductService,
-                http_1.HTTP_PROVIDERS]
-        }), 
+                http_1.HTTP_PROVIDERS,
+                router_1.ROUTER_PROVIDERS]
+        }),
+        router_1.Routes([
+            { path: '/', component: welcome_component_1.WelcomeComponent },
+            { path: '/welcome', component: welcome_component_1.WelcomeComponent },
+            { path: '/products', component: product_list_component_ts_1.ProductListComponent }
+        ]), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
