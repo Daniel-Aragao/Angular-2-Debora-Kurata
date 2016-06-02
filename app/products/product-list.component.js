@@ -13,6 +13,7 @@ var Product_filter_pipe_1 = require('./Product-filter.pipe');
 var real_pipe_1 = require('../shared/price-pipe/real-pipe');
 var star_component_1 = require('../shared/star.component/star.component');
 var product_service_1 = require('./product.service');
+var router_deprecated_1 = require('@angular/router-deprecated');
 var ProductListComponent = (function () {
     function ProductListComponent(_productService) {
         this._productService = _productService;
@@ -35,11 +36,10 @@ var ProductListComponent = (function () {
     };
     ProductListComponent = __decorate([
         core_1.Component({
-            selector: 'pm-products',
             templateUrl: 'app/products/product-list.component.html',
             styleUrls: ['app/products/product-list.component.css'],
             pipes: [Product_filter_pipe_1.ProductFilterPipe, real_pipe_1.RealPipe],
-            directives: [star_component_1.StarComponent]
+            directives: [star_component_1.StarComponent, router_deprecated_1.ROUTER_DIRECTIVES]
         }), 
         __metadata('design:paramtypes', [product_service_1.ProductService])
     ], ProductListComponent);
